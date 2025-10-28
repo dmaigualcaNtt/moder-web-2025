@@ -3,7 +3,7 @@ import { useTheme } from '@/hooks/useTheme'
 import { useState } from 'react'
 
 export function Navbar() {
-  const { theme, setTheme, resolvedTheme } = useTheme()
+  const { setTheme, resolvedTheme } = useTheme()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const toggleTheme = () => {

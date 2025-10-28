@@ -1,4 +1,4 @@
-import { useState, useActionState, useOptimistic } from 'react'
+import { useState, useOptimistic } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Mail, Send, CheckCircle, AlertCircle } from 'lucide-react'
@@ -11,8 +11,8 @@ type FormState = {
 
 // Simulated async action (in real app, this would call an API)
 async function submitContactForm(
-  prevState: FormState,
-  formData: FormData
+  _prevState: FormState,
+  _formData: FormData
 ): Promise<FormState> {
   // Simulate network delay
   await new Promise((resolve) => setTimeout(resolve, 1500))
